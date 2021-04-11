@@ -249,7 +249,7 @@ public class UserController {
             String filepath = "jcxk/user/"+openId+suffix;
             OSSUtils.putObject(filepath,file.getInputStream());
             json.put("success",true);
-            json.put("photo","http://unisedu.com"+filepath);
+            json.put("photo","http://pic.unisedu.com/"+filepath);
         }else{
             json.put("success",false);
         }
