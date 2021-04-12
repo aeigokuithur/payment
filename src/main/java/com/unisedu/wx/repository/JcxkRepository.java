@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface JcxkRepository extends CrudRepository<Jcxk, Long> {
 
-    public Jcxk findByCardNumberAndSubject(String cardNumber,String subject);
+    Jcxk findByCardNumber(String cardNumber);
 }

@@ -80,7 +80,7 @@ public class UserController {
         json.put("user",new JSONObject(userJson));
 
         //判断是否有资格报名
-        if(jcxkRepository.findByCardNumberAndSubject(user.getCardNumber(),user.getSubject())!=null){
+        if(jcxkRepository.findByCardNumber(user.getCardNumber())!=null){
             //生成订单
             Order order = orderService.findByOpenIdAndWebsite(user.getOpenId(),"academic");
             if(order==null){
