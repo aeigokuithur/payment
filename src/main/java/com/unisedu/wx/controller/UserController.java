@@ -58,7 +58,7 @@ public class UserController {
     public JcxkUser getStudyUser(JcxkUser jcxkUser){
         JcxkUser temp = jcxkUserRepository.findByOpenId(jcxkUser.getOpenId());
         if(temp==null){
-            jcxkUser.setSubject("语文");
+            jcxkUser.setSubject("数学，语文");
             jcxkUserRepository.save(jcxkUser);
             return jcxkUser;
         }else{
