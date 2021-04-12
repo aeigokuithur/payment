@@ -86,7 +86,7 @@ public class UserController {
             if(order==null){
                 order = new Order();
                 order.setWebsite("jcxk");
-                order.setPrice("0.01");
+                order.setPrice("4980");
                 order.setUserId(user.getOpenId());
                 order.setTitle("基础学科夏令营报名费");
                 orderService.generateOrder(order);
@@ -138,9 +138,9 @@ public class UserController {
         if(order == null){
             order = new Order();
             order.setWebsite("academic");
-            order.setPrice("0.01");
+            order.setPrice("4980");
             order.setUserId(user.getOpenId());
-            order.setTitle("学术研究营报名费");
+            order.setTitle("学术作品营报名费");
             orderService.generateOrder(order);
         }
         String orderJson = mapper.writeValueAsString(order);
@@ -185,7 +185,7 @@ public class UserController {
         if(order == null){
             order = new Order();
             order.setWebsite("study");
-            order.setPrice("0.01");
+            order.setPrice("9800");
             order.setUserId(user.getOpenId());
             order.setTitle("青少年研究性学习营报名费");
             orderService.generateOrder(order);

@@ -57,6 +57,8 @@ public class OrderController {
 
     @RequestMapping(path = "hasOrder")
     public boolean hasOrder(HttpServletRequest request){
+        System.out.println(request.getParameter("openid"));
+        System.out.println(request.getParameter("website"));
         Order order = orderService.findByOpenIdAndWebsite(request.getParameter("openid"),request.getParameter("website"));
         System.out.println(order);
         return order != null;
