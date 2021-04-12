@@ -82,7 +82,7 @@ public class UserController {
         //判断是否有资格报名
         if(jcxkRepository.findByCardNumber(user.getCardNumber())!=null){
             //生成订单
-            Order order = orderService.findByOpenIdAndWebsite(user.getOpenId(),"academic");
+            Order order = orderService.findByOpenIdAndWebsite(user.getOpenId(),"jcxk");
             if(order==null){
                 order = new Order();
                 order.setWebsite("jcxk");
