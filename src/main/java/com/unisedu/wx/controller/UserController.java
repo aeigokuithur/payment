@@ -26,6 +26,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -80,7 +81,8 @@ public class UserController {
         json.put("user",new JSONObject(userJson));
 
         //判断是否有资格报名
-        if(jcxkRepository.findByCardNumber(user.getCardNumber())!=null){
+        List<Jcxk> list = jcxkRepository.findByCardNumber(user.getCardNumber());
+        if(list!=null&&list.size()>0){
             //生成订单
             Order order = orderService.findByOpenIdAndWebsite(user.getOpenId(),"jcxk");
             if(order==null){
