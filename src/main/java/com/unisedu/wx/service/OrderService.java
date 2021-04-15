@@ -78,6 +78,7 @@ public class OrderService {
         }else{
             order = orderRepository.findByOrderNo(order.getOrderNo());
         }
+        System.out.println(order);
         String wxCode = getWxCode(order);
         String alipayCode = getAlipayCode(order);
 
