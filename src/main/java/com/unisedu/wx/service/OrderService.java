@@ -73,6 +73,7 @@ public class OrderService {
      */
     public JSONObject getPayCode(Order order){
         JSONObject json = new JSONObject();
+        System.out.println(order);
         if(order.getOrderNo() == null){
             generateOrder(order);
         }else{
