@@ -24,7 +24,7 @@ public class Global {
         map.put("alipayKey1","37wk34wjpw9nzgd7vublfzyj4zju2ilb");
         map.put("alipayNotifyUrl1","http://pay.unisedu.com/order/alipayNotify");
 
-        map.put("notifyUrl1","http://localhost:8081/order/bsttyobs");
+        map.put("notifyUrl1","http://www.kepukehuan.com/order/bsttyobs");
 
 
     }
